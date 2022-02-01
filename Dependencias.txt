@@ -1,0 +1,21 @@
+========================================================== DEPENDENCIAS UTILIZADAS ==========================================================
+
+° Microsoft Windows 10.
+
+° Google Chrome.
+
+° SublimeText.
+
+° HTML.
+
+° CSS.
+
+° Bootstrap.
+
+° Python.
+
+° Servidor Web XAMPP.
+
+° MySQL.
+
+° DJango.

@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %} Editar Empleado {% endblock %}
+
+{% block body %}
+
+<h3>Editar Empleado</h3>
+<br>
+<form action="/actualizarEmpleado/" method="POST">{% csrf_token %}
+    <div class="form-group">
+        <label for="nombre">Nombre*</label>
+        <input type="text" id="nombre" name="nombre" class="form-control" value="{{empleado.nombre}}">
+    </div>
+    <br>
+    <div class="form-group">
+        <label for="nacimiento">Nacimiento*</label>
+        <input type="date" id="nacimiento" name="nacimiento" class="form-control" value="{{empleado.nacimiento}}">
+    </div>
+    <br>
+    <div class="form-group">
+        <label for="correo">Correo Electrónico*</label>
+        <input type="email" id="correo" name="correo" class="form-control" value="{{empleado.correo}}">
+    </div>
+    <br>
+    <div class="form-group">
+        <label for="descripcion">Descripción*</label>
+        <input type="text" id="descripcion" name="descripcion" class="form-control" value="{{empleado.descripcion}}">
+    </div>
+    <br>
+    <input type="hidden" id="id_empleado" name="id_empleado" class="form-control" value="{{empleado.id_empleado}}" readonly>
+    <button class="btn btn-primary" type="submit">Editar</button>
+    <a class="btn btn-danger" href="/empleados">Cancelar</a>
+</form>
+
+{% endblock %}

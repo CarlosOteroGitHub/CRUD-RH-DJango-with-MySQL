@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block title %} Crear Empleado {% endblock %}
+
+{% block body %}
+
+<h3>Agregar Empleado</h3>
+<br>
+<form action="/insertarEmpleado/" method="POST">{% csrf_token %}
+    <div class="form-group">
+        <label for="nombre">Nombre*</label>
+        <input type="text" id="nombre" name="nombre" class="form-control">
+    </div>
+    <br>
+    <div class="form-group">
+        <label for="nacimiento">Nacimiento*</label>
+        <input type="date" id="nacimiento" name="nacimiento" class="form-control">
+    </div>
+    <br>
+    <div class="form-group">
+        <label for="correo">Correo Electrónico*</label>
+        <input type="email" id="correo" name="correo" class="form-control">
+    </div>
+    <br>
+    <div class="form-group">
+        <label for="descripcion">Descripción*</label>
+        <input type="text" id="descripcion" name="descripcion" class="form-control">
+    </div>
+    <br>
+    <button class="btn btn-success" type="submit">Agregar</button>
+    <a class="btn btn-danger" href="/empleados">Cancelar</a>
+</form>
+
+{% endblock %}

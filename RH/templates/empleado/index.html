@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block title %} Empleados {% endblock %}
+
+{% block body %}
+
+{% if messages %}
+{% for message in messages %}
+<div class="alert alert-dismissible alert-success">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <strong class="text-dark">{{ message }}</strong>
+</div>
+{% endfor %}
+{% endif %}
+<div class="card">
+    <div class="card-header">
+        <h3>Listado de Empleados</h3>
+    </div>
+    <div class="card-body">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Nacimiento</th>
+                    <th>Correo</th>
+                    <th>Descripción</th>
+                    <th>Editar</th>
+                    <th>Eliminar</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for empleado in empleados %}
+                <tr>
+                    <td>{{empleado.id_empleado}}</td>
+                    <td>{{empleado.nombre}}</td>
+                    <td>{{empleado.nacimiento}}</td>
+                    <td>{{empleado.correo}}</td>
+                    <td>{{empleado.descripcion}}</td>
+                    <th><a href="/empleado/editar/{{empleado.id_empleado}}" class="btn btn-primary" role="button">Editar</a></th>
+                    <th><a href="/eliminarEmpleado/{{empleado.id_empleado}}" class="btn btn-danger" role="button">Eliminar</a></th>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <a name="" id="" href="/empleado/crear" role="button" class="btn btn-success">Agregar Empleado</a>
+    </div>
+
+
+{% endblock %}

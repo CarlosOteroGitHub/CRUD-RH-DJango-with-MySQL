@@ -1,0 +1,17 @@
+========================================================== COMANDOS ==========================================================
+
+° pip install django: Comando utilizado para instalar la ultima versión de Django.
+
+° pip install PyMySQL: Comando utilizado para instalar las dependencias de conexión entre DJango y MySQL.
+
+° django-admin startproject [nombre_proyecto]: Comando para inicializar un proyecto Django (Para el presente CRUD se creó el proyecto Empresa).
+
+° django-admin startapp [nombre_aplicacion]: Comando que crea una aplicación o módulo Django (Para el presente proyecto se creó la aplicación Empleado).
+
+° python manage.py migrate: Comando que crea la base de datos del proyecto.
+
+° python manage.py makemigrations: Comando que crea los modelos especificados en la base de datos.
+
+° python manage.py createsuperuser: Comando que crea un superusuario para la base de datos.
+
+° python manage.py runserver: Comando utilizado para hacer correr el servidor de Django. El servidor corre por defecto en el navegador con la dirección localhost:8000
